@@ -1,0 +1,97 @@
+---
+interface Props {
+  class?: string
+}
+---
+
+<form
+  class={`md:w-full w-[90%] bg-zinc-100/90 py-6 px-8 rounded-lg ${Astro.props.class}`}
+>
+  <h3 class='text-xl font-bold mb-4'>¡Contactenos Ahora!</h3>
+  <p class='mb-5 font-openSans font-medium text-gray-500'>
+    Asesoría 100% personalizada
+  </p>
+  <div class='mb-4'>
+    <label
+      for='name'
+      class='block mb-2 font-semibold font-openSans text-sm text-gray-900'
+      >Tu Nombre</label
+    >
+    <input
+      type='text'
+      id='name'
+      name='name'
+      class='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+      required
+    />
+  </div>
+  <div class='mb-4'>
+    <label
+      for='email'
+      class='block mb-2 font-semibold font-openSans text-sm text-gray-900'
+      >Correo</label
+    >
+    <input
+      type='email'
+      id='email'
+      name='email'
+      class='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+      required
+    />
+  </div>
+  <div class='mb-4'>
+    <label
+      for='phone'
+      class='block mb-2 font-semibold font-openSans text-sm text-gray-900'
+      >Número de Celular</label
+    >
+    <input
+      type='text'
+      id='phone'
+      name='phone'
+      class='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+      required
+    />
+  </div>
+
+  <div class='mb-4'>
+    <label
+      for='message'
+      class='block mb-2 font-semibold font-openSans text-sm text-gray-900'
+      >Monto de Crédito</label
+    >
+    <textarea
+      name='message'
+      rows='2'
+      id='message'
+      class='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+      required></textarea>
+  </div>
+
+  <div class='flex items-start mb-5'>
+    <div class='flex items-center h-5'>
+      <input
+        id='terms'
+        type='checkbox'
+        value=''
+        class='w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800'
+        required
+      />
+    </div>
+    <label
+      for='terms'
+      class='ms-2 font-bold font-openSans text-sm text-gray-900'
+      >Estoy de acuerdo con el <a
+        href='/aviso-privacidad'
+        class='text-blue-600 hover:underline dark:text-blue-500'
+        >Aviso de Privacidad</a
+      ></label
+    >
+  </div>
+  <button
+    type='submit'
+    class='text-black transition ease-in-out duration-300 bg-primary border-2 hover:border-primary hover:bg-transparent hover:scale-105 font-bold rounded-lg uppercase px-6 py-4 text-center'
+  >
+    Solicitar
+  </button>
+</form>

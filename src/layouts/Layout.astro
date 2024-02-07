@@ -1,0 +1,137 @@
+---
+import '@fontsource-variable/jost'
+import '@fontsource-variable/open-sans'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Up from '../components/icons/Up.astro'
+import { ViewTransitions } from 'astro:transitions'
+import WsButton from '../components/WsButton.astro'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='description'
+      content='¡Desata tus sueños financieros con nuestros préstamos en línea! Rápidos, seguros y transparentes. Tu camino hacia la libertad económica.'
+    />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+    <div id='scroll-top'><Up /></div>
+    <WsButton />
+    <style is:global>
+      :root {
+      }
+      html {
+        font-family: 'Jost Variable', 'Open Sans Variable', system-ui,
+          sans-serif;
+        background: #fff;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .section {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1280px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-family: 'Open Sans Variable', system-ui, sans-serif;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 2.5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      #header-nav {
+        animation: blur linear both;
+        animation-timeline: scroll();
+        animation-range: 0 150px;
+      }
+
+      @keyframes blur {
+        to {
+          box-shadow:
+            0px 5px 50px -5px rgba(0, 0, 100%, 0.1),
+            0px 0px 0 1px rgba(0, 0, 0, 0.1);
+          background: rgba(255, 255, 255, 0.75);
+          backdrop-filter: blur(10px);
+        }
+      }
+
+      #scroll-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 10px;
+        background-color: white;
+        fill: cyan;
+        border-radius: 50%;
+        border: 1px solid cyan;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+      }
+
+      #scroll-top:hover {
+        background-color: cyan;
+        fill: white;
+        box-shadow: 0 0 10px 0 cyan;
+      }
+
+      #scroll-top.show {
+        opacity: 1;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('astro:page-load', () => {
+        const $scrollTop = document.querySelector(
+          '#scroll-top'
+        ) as HTMLDivElement
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 150) {
+            $scrollTop.classList.add('show')
+          } else {
+            $scrollTop.classList.remove('show')
+          }
+        })
+
+        $scrollTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+---
+import Button from './Button.astro'
+import Logo from './Logo.astro'
+import Menu from './icons/Menu.astro'
+---
+
+<header id='header-nav' class='fixed w-full top-0 z-50'>
+  <nav
+    class='flex flex-wrap justify-between items-center mx-auto w-full max-w-screen-xl px-4 py-3 relative'
+  >
+    <Logo textColor='black' />
+    <button
+      id='toggle_menu'
+      class='flex flex-col items-center w-8 h-8 border-0 bg-transparent gap-[.65rem] md:hidden'
+    >
+      <Menu />
+    </button>
+    <ul
+      id='header-menu'
+      class='w-full bg-black md:bg-transparent absolute md:static md:w-auto md:h-auto top-[79px] left-0 h-0 overflow-hidden md:overflow-visible text-white md:text-black font-semibold [&>li>a]:text-2xl [&>li>a]:md:text-base flex flex-col md:flex-row justify-center items-center gap-10 md:gap-7 transition-all duration-200 [&>li>a]:px-2 [&>li>a]:py-3'
+    >
+      <li><a href='/'>Inicio</a></li>
+      <li><a href='#'>Nosotros</a></li>
+      <li><a href='#'>Soluciones</a></li>
+      <li><a href='#'>Como Aplicar</a></li>
+      <li>
+        <Button href='/contactenos' type='header'>Contáctenos</Button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const $toggleMenu = document.querySelector(
+      '#toggle_menu'
+    ) as HTMLButtonElement
+    const $headerMenu = document.querySelector(
+      '#header-menu'
+    ) as HTMLUListElement
+
+    $toggleMenu.addEventListener('click', () => {
+      if ($headerMenu.classList.contains('h-0')) {
+        $headerMenu.classList.remove('h-0')
+        $headerMenu.classList.add('h-[calc(100vh-79px)]')
+      } else {
+        $headerMenu.classList.remove('h-[calc(100vh-79px)]')
+        $headerMenu.classList.add('h-0')
+      }
+    })
+  })
+</script>

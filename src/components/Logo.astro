@@ -1,0 +1,99 @@
+---
+interface Props {
+  textColor: string
+}
+
+const { textColor } = Astro.props
+---
+
+<a href='/' class='flex items-center z-50'>
+  <svg
+    width='56'
+    height='55'
+    viewBox='0 0 56 55'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <g id='Logo'>
+      <path
+        id='Intersect'
+        d='M27.335 13C27.6607 13.3998 27.8574 13.9188 27.8574 14.4859V36C23.2117 34.3984 19.8574 29.8114 19.8574 24.4026C19.8574 19.1988 22.9623 14.7556 27.335 13Z'
+        fill='#47CFFF'></path>
+      <rect
+        id='Rectangle 487'
+        x='0.5'
+        width='55'
+        height='55'
+        rx='9'
+        fill='#F4F4F4'></rect>
+      <g id='Rectangle 489' style='mix-blend-mode:darken'></g>
+      <g transform='matrix(1, 0, 0, 1, 0.186299, -1.717064)'>
+        <g>
+          <g transform='matrix(1, 0, 0, 1, -9, 0)'>
+            <rect
+              id='Rectangle 488'
+              x='14.8574'
+              y='12'
+              width='13'
+              height='34'
+              rx='3'
+              fill='#263238'></rect>
+            <rect
+              id='rect-1'
+              x='30.125'
+              y='-46.185'
+              width='13'
+              height='34'
+              fill='#263238'
+              rx='3'
+              style=''
+              transform='matrix(1, 0, 0, -1, 0, 0)'></rect>
+            <rect
+              id='rect-2'
+              x='33.94'
+              y='-43.165'
+              width='13'
+              height='34'
+              fill='#263238'
+              rx='3'
+              style='transform-box: fill-box; transform-origin: 50% 50%;'
+              transform='matrix(0.875206, -0.48375, -0.48375, -0.875206, -11.572272, 55.382063)'
+            ></rect>
+          </g>
+          <rect
+            x='22.337'
+            y='17.913'
+            width='25'
+            height='25'
+            style='fill: rgb(75, 227, 235);'
+            rx='12.5'
+            ry='12.5'></rect>
+        </g>
+        <rect
+          x='31.505'
+          y='23.111'
+          width='11.536'
+          height='14.781'
+          style='stroke: rgb(0, 0, 0); fill: rgb(244, 244, 244); stroke-width: 0px;'
+          rx='8.411'
+          ry='8.411'></rect>
+        <rect
+          x='38.234'
+          y='26.295'
+          width='11.536'
+          height='8.653'
+          style='stroke: rgb(0, 0, 0); fill: rgb(244, 244, 244); stroke-width: 0px;'
+          rx='2.163'
+          ry='2.163'></rect>
+      </g>
+    </g>
+  </svg>
+  <div class='flex flex-col'>
+    <span class={`text-2xl font-bold leading-tight pl-2 text-${textColor}`}>
+      Nacional de Créditos 
+    </span>
+    <span class={`pl-2 text-[#4be3eb] text-end -mt-2`}>
+      Al Servicio
+    </span>
+  </div>
+</a>

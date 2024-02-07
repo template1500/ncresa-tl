@@ -1,0 +1,32 @@
+---
+import FeatureBox from './FeatureBox.astro'
+---
+
+<section class='section pt-16 pb-20 text-center'>
+  <h2 class='title'>Como Funcionan Nuestros Préstamos</h2>
+  <p class='subtitle'>
+    🏆 ¡Logra tus objetivos con el respaldo de nuestros préstamos en línea! La
+    herramienta que necesitas para triunfar.
+  </p>
+
+  <div class='grid md:grid-cols-3 grid-cols-1 gap-8'>
+    <FeatureBox
+      img='/icons/counter_1.svg'
+      title='Ejemplo de Préstamo 1'
+      description='Un cliente solicita un préstamo de $2.000.000 a un plazo de 12 meses. El interés será del 0.3%. Pagará $2.119.992 y las cuotas serán de $176.600.'
+      class='[&>img]:mx-auto'
+    />
+    <FeatureBox
+      img='/icons/counter_2.svg'
+      title='Ejemplo de Préstamo 2'
+      description='Un cliente solicita un préstamo de $100.000.000 a un plazo de 12 meses. El interés será del 0.3%. Pagará $100.560.790 y las cuotas serán de $8.373.300.'
+      class='bg-zinc-100/70 [&>img]:mx-auto'
+    />
+    <FeatureBox
+      img='/icons/counter_3.svg'
+      title='Ejemplo de Préstamo 3'
+      description='Un cliente solicita un préstamo de $500.000.000 a un plazo de 12 meses. El interés será del 0.3%. Pagará $500.534.500 y las cuotas serán de $41.706.600.'
+      class='[&>img]:mx-auto'
+    />
+  </div>
+</section>

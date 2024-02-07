@@ -1,0 +1,31 @@
+---
+import FeatureBox from './FeatureBox.astro'
+---
+
+<section id='saber-mas' class='section pt-72 md:pt-16 pb-20 text-center'>
+  <h2 class='title'>Sistema de Préstamos Rápidos</h2>
+  <p class='subtitle'>
+    🚀 ¡Descubre la libertad financiera con nuestros préstamos en línea! Rápido,
+    fácil y seguro.
+  </p>
+
+  <div class='grid md:grid-cols-3 grid-cols-1 gap-8'>
+    <FeatureBox
+      img='/features/iconFB1.svg'
+      title='Préstamos Turbo'
+      description='¡La Velocidad que Tu Billetera Necesita! Obtén efectivo en tiempo récord, sin papeleos ni esperas. ¡Tu solución instantánea para emergencias y oportunidades!'
+      class='bg-zinc-100/70'
+    />
+    <FeatureBox
+      img='/features/iconFB2.svg'
+      title='Dinero Express'
+      description='El dinero está a solo un clic. Toma el control de tus finanzas con aprobaciones y desembolsos inmediatos. ¡Decide hoy, benefíciate al instante!'
+    />
+    <FeatureBox
+      img='/features/iconFB3.svg'
+      title='Créditos Relámpago'
+      description='Tu Salvavidas Financiero en Minutos. No más esperas, no más complicaciones. Obtén liquidez en minutos, sin trámites engorrosos.'
+      class='bg-zinc-100/70'
+    />
+  </div>
+</section>

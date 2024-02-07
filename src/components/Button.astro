@@ -1,0 +1,45 @@
+---
+interface Props {
+  href: string
+  type?: string
+  class?: string
+}
+
+const { href, type } = Astro.props
+let style
+
+if (type === 'header') {
+  style =
+    'bg-primary md:bg-gray-900 text-black md:text-white hover:bg-transparent hover:border-primary hover:md:border-gray-900 hover:text-white hover:md:text-black hover:shadow-inner hover:shadow-primary'
+}
+
+if (type === 'black') {
+  style =
+    'bg-gray-900 text-white hover:bg-transparent hover:border-gray-900 hover:text-black hover:md:text-gray-900'
+}
+
+if (type === 'transparent') {
+  style = 'bg-transparent text-black hover:border-black'
+}
+
+if (type === 'primary') {
+  style =
+    'text-black bg-primary border-2 hover:border-primary hover:bg-transparent hover:text-primary hover:shadow-inner hover:shadow-primary'
+}
+
+if (type === 'secondary') {
+  style =
+    'text-black bg-secondary border-2 hover:border-secondary hover:bg-transparent'
+}
+---
+
+<a
+  href={href}
+  class:list={[
+    'px-6 py-4 rounded font-semibold transition ease duration-300 border-2 border-transparent',
+    style,
+    Astro.props.class
+  ]}
+>
+  <slot />
+</a>

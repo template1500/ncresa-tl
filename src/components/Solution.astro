@@ -1,0 +1,54 @@
+---
+import Button from './Button.astro'
+import Form from './Form'
+---
+
+<section class='section pt-24 pb-20'>
+  <div
+    style="background-image: url('/solution/bgSolution.webp'); trasform: rotate(150deg);"
+    class='bg-repeat h-[500px] rounded-3xl bg-center'
+  >
+    <div class='flex flex-col md:flex-row md:justify-between'>
+      <div
+        class='relative top-20 md:top-32 text-center md:text-left left-0 md:left-14'
+      >
+        <h3 class='title text-white'>Soluciones Financieras</h3>
+        <p class='text-white font-openSans mx-auto md:mx-0 w-[90%] md:w-3/4'>
+          💡 ¿Tu sueño está a un clic de distancia? <br />Descubre cómo nuestros
+          préstamos en línea pueden hacerlo realidad.
+        </p>
+      </div>
+
+      <div
+        class='relative top-32 md:top-36 mx-auto md:mx-0 right-0 md:right-14'
+      >
+        <p class='text-white font-openSans inline-block pr-12'>
+          Línea de Atención
+        </p>
+        <Button href='tel:+573222576038' type='primary'>¡Llama Ya!</Button>
+      </div>
+    </div>
+  </div>
+  <div
+    class='w-11/12 h-[995px] md:h-[625px] bg-zinc-100 mx-auto my-auto rounded-3xl -mt-36 md:-mt-48 shadow-2xl'
+  >
+    <div
+      class='grid md:grid-cols-2 gap-4 md:auto-rows-[30rem] [&>div]:rounded-lg p-4'
+    >
+      <div class='flex flex-col justify-center items-center w-full'>
+        <h4 class='font-bold text-3xl pb-1 md:pb-4 text-center md:text-left'>
+          ¡Solicite un Asesor Aquí!
+        </h4>
+        <p class='font-openSans text-lg w-3/4 text-center p-4 md:p-8'>
+          No espere más y llene el formulario o contáctenos enseguida
+        </p>
+
+        <Button href='tel:+573222576033' type='black' class='mb-5 px-10'>Llamar Asesor</Button>
+        <Button href='https://wa.link/x6kwzt' type='secondary'>Línea WhatsApp</Button>
+      </div>
+      <div class='mx-auto'>
+        <Form className='mx-auto text-center' client:visible />
+      </div>
+    </div>
+  </div>
+</section>

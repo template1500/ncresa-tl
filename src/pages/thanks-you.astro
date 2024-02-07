@@ -1,7 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Button from '../components/Button.astro'
+import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title="Gracias">
-  <h1>Gracias</h1>
+<Layout title='Nacional de Créditos al Servicio | Gracias Por Preferirnos'>
+  <main>
+    <div
+      style="background-image: url('/background/bg1.webp');"
+      class='bg-no-repeat bg-right-top bg-cover md:bg-contain object-fill h-full'
+    >
+      <div class='section py-72 h-screen  text-center'>
+        <h2 class='title'>¡Gracias Por Preferirnos!</h2>
+        <p class='subtitle'>
+          ¡Listo! 🌟 Mensaje recibido con éxito. Nuestro asesor se pondrá en contacto contigo en breve. ¡Disfruta del servicio financiero de alta calidad que te ofrecemos! 💼✨ 
+          <br><br>
+          🌟 ¡Gracias por confiar en nosotros! 🌟
+        </p>
+        <Button href='/' type='black'>Ir al Inicio</Button>
+      </div>
+    </div>
+  </main>
 </Layout>

@@ -81,7 +81,7 @@ export default function Form(className: Props) {
     <form
       ref={formRef}
       onSubmit={handleFormSubmit}
-      className={`md:w-full w-[90%] bg-zinc-100/90 py-6 px-8 rounded-lg ${className}`}
+      className={className.className}
     >
       <h3 className='text-xl font-bold mb-4'>¡Contáctenos Ahora!</h3>
       <p className='mb-5 font-openSans font-medium text-gray-500'>

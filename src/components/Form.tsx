@@ -99,6 +99,7 @@ export default function Form(className: Props) {
           id='name'
           name='name'
           className='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+          required
         />
       </div>
       <div className='mb-4'>
@@ -113,6 +114,7 @@ export default function Form(className: Props) {
           id='email'
           name='email'
           className='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+          required
         />
       </div>
       <div className='mb-4'>
@@ -127,6 +129,7 @@ export default function Form(className: Props) {
           id='phone'
           name='phone'
           className='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+          required
         />
       </div>
 
@@ -142,6 +145,7 @@ export default function Form(className: Props) {
           rows={2}
           id='message'
           className='shadow-sm bg-gray-50 border border-gray-300 font-openSans text-sm text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
+          required
         ></textarea>
       </div>
 
@@ -152,6 +156,7 @@ export default function Form(className: Props) {
             type='checkbox'
             value=''
             className='w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800'
+            required
           />
         </div>
         <label
